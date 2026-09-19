@@ -54,6 +54,8 @@ namespace ASI.Basecode.WebApp
                                       .AllowAnyMethod());
             });
             this._services.AddControllers();
+            this._services.AddEndpointsApiExplorer();
+            this._services.AddSwaggerGen();
         }
     }
 }

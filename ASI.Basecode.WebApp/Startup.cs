@@ -144,6 +144,12 @@ namespace ASI.Basecode.WebApp
             this._app.UseHttpsRedirection();
             this._app.UseStaticFiles();
 
+            if (this._environment.IsDevelopment())
+            {
+                this._app.UseSwagger();
+                this._app.UseSwaggerUI();
+            }
+
             // Localization
             var options = this._app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             this._app.UseRequestLocalization(options.Value);

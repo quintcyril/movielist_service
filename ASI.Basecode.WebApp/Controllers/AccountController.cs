@@ -76,6 +76,7 @@ namespace ASI.Basecode.WebApp.Controllers
         /// <summary>
         /// Sign Out current account
         /// </summary>
+        [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> SignOutUser()
         {
